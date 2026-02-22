@@ -216,6 +216,30 @@
             margin: 1.25rem 0;
         }
 
+        /* Feedback link */
+        .feedback-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--surface-hover);
+            border: 1px solid var(--border);
+            color: var(--accent);
+            padding: 0.65rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .feedback-link:hover {
+            background: var(--surface);
+            border-color: hsl(0 0% 25%);
+            transform: translateY(-1px);
+            text-decoration: none;
+            color: var(--accent);
+        }
+
         /* Footer */
         .footer {
             margin-top: 3.5rem;
@@ -516,10 +540,16 @@
 
         <!-- 9. Contact -->
         <h2>9. Contact Us</h2>
-        <div class="section-card">
-            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p style="margin-bottom: 0;"><strong>📧 <a
-                        href="mailto:spcfdoho.dev@gmail.com">spcfdoho.dev@gmail.com</a></strong></p>
+        <div class="section-card" style="text-align: center;">
+            <p>If you have any questions about this Privacy Policy, please reach out:</p>
+            <a href="mailto:spcfdoho.dev@gmail.com?subject=Timber Privacy Policy Question" class="feedback-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                Send us an email
+            </a>
         </div>
 
         <!-- Footer -->
