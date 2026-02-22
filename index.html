@@ -11,16 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0f1117;
-            --surface: #1a1d27;
-            --surface-hover: #22252f;
-            --border: #2a2d3a;
-            --text: #e4e6ed;
-            --text-muted: #8b8fa3;
-            --accent: #6ee7b7;
-            --accent-dim: rgba(110, 231, 183, 0.1);
-            --link: #60a5fa;
-            --link-hover: #93c5fd;
+            --bg: hsl(0 0% 7%);
+            --surface: hsl(0 0% 12%);
+            --surface-hover: hsl(0 0% 15%);
+            --border: hsl(0 0% 18%);
+            --text: hsl(0 0% 88%);
+            --text-muted: hsl(0 0% 55%);
+            --accent: hsl(122 39% 49%);
+            --accent-dim: hsl(122 39% 49% / 0.15);
+            --link: hsl(122 39% 60%);
+            --link-hover: hsl(122 39% 70%);
         }
 
         * {
@@ -39,9 +39,17 @@
         }
 
         .container {
-            max-width: 740px;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 3rem 1.5rem 5rem;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
 
         /* Header */
@@ -58,7 +66,6 @@
             justify-content: center;
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%);
             border-radius: 14px;
             margin-bottom: 1.25rem;
             font-size: 1.5rem;
@@ -243,7 +250,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <img src="logo.png" alt="Timber Logo" style="width: 56px; height: 56px; border-radius: 14px;">
+            <img src="logo.png" alt="Timber Logo" class="logo">
             <h1>Timber Privacy Policy</h1>
             <p class="subtitle">How we handle your data in the Timber timer app</p>
             <span class="last-updated">Last updated: February 20, 2026</span>
