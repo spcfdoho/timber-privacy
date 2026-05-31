@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timber — Privacy Policy</title>
     <meta name="description" content="Privacy Policy for the Timber timer application. Learn how we handle your data.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: hsl(0 0% 7%);
@@ -30,7 +27,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.7;
@@ -209,7 +206,6 @@
 
         /* Section cards */
         .section-card {
-            /* background: var(--surface); */
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
@@ -298,7 +294,7 @@
             <img src="logo.png" alt="Timber Logo" class="logo">
             <h1>Timber Privacy Policy</h1>
             <p class="subtitle">How we handle your data in the Timber timer app</p>
-            <span class="last-updated">Last updated: February 20, 2026</span>
+            <span class="last-updated">Last updated: June 1, 2026</span>
         </div>
 
         <!-- 1. Information We Collect -->
@@ -310,12 +306,24 @@
                 history you create within the App. This data is stored <strong>locally on your device</strong> using
                 SQLite and is never transmitted to our servers.</li>
             <li><strong>Audio Recordings:</strong> If you use the audio recording feature, recorded audio is stored
-                locally on your device in the app's designated storage directory.</li>
-            <li><strong>Media Files:</strong> Audio and video files you import for use with timers are stored locally in
-                the Documents/Timber folder on your device.</li>
+                locally on your device in the Documents/Timber folder. Recordings are never uploaded or transmitted
+                anywhere.</li>
+            <li><strong>Media Files:</strong> Audio, video, and image files you import for use with timers are
+                selected through your device's <strong>system file picker</strong> (Storage Access Framework). The
+                App copies your selected file into the Documents/Timber folder for later playback. The App does not
+                browse, index, or access your broader photo, video, or audio library.</li>
         </ul>
 
         <h3>1.2 Information Collected Automatically</h3>
+
+        <div class="callout">
+            <p>The App is designed with privacy as the default. Firebase Analytics and Firebase
+                Crashlytics are <strong>disabled until you explicitly opt in</strong> from the in-app
+                consent prompt (shown after you have used the App for several timer sessions) or from
+                Settings → Privacy. The data described in the Analytics and Crash Reporting subsections
+                below is only collected if and after you have given consent. You can revoke consent at
+                any time.</p>
+        </div>
 
         <h4>Advertising (Google AdMob)</h4>
         <p>We use <strong>Google AdMob</strong> to display advertisements within the App. AdMob may automatically
@@ -327,9 +335,13 @@
             <li>Ad interaction data (impressions, clicks)</li>
             <li>General location data (derived from IP address)</li>
         </ul>
-        <p>Google AdMob uses this data to serve personalized or non-personalized ads based on your preferences. For more
-            information, see the <a href="https://policies.google.com/privacy" target="_blank"
-                rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+        <p>On devices where consent is required by law (European Economic Area, the United Kingdom, Switzerland,
+            and certain US states), AdMob only collects identifying data after you have given consent through the
+            in-app Google User Messaging Platform form on first launch. You can revisit and change this consent at
+            any time from <strong>Settings → Privacy → Ad Privacy Options</strong>. For more information, see the
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy
+                Policy</a>.
+        </p>
 
         <h4>In-App Purchases (RevenueCat)</h4>
         <p>We use <strong>RevenueCat</strong> to manage in-app subscriptions and purchases. RevenueCat may collect:</p>
@@ -345,11 +357,12 @@
         </p>
 
         <h4>Analytics (Firebase Analytics)</h4>
-        <p><strong>Firebase Analytics</strong> (by Google) may collect:</p>
+        <p><strong>Firebase Analytics</strong> (by Google) may collect, only after you have opted in:</p>
         <ul>
             <li>App usage data (screen views, session duration, feature usage)</li>
             <li>Device information (model, OS version, language, screen resolution)</li>
-            <li>Anonymous user identifiers</li>
+            <li>Firebase Installation ID — a pseudonymous identifier that is reset when you uninstall the App or
+                clear app data, but is otherwise stable across launches</li>
             <li>General location data (country/region from IP address)</li>
         </ul>
         <p>This data is used solely to understand how users interact with the App and to improve the user experience.
@@ -357,7 +370,7 @@
                 rel="noopener noreferrer">Firebase Privacy Information</a>.</p>
 
         <h4>Crash Reporting (Firebase Crashlytics)</h4>
-        <p><strong>Firebase Crashlytics</strong> may collect:</p>
+        <p><strong>Firebase Crashlytics</strong> may collect, only after you have opted in:</p>
         <ul>
             <li>Crash logs and stack traces</li>
             <li>Device state at the time of the crash (memory usage, disk space, battery state)</li>
@@ -374,6 +387,9 @@
                 identifiable information. We do <strong>not</strong> collect or transmit audio recordings, timer data,
                 or any user-created content to external servers. We do <strong>not</strong> use any form of user
                 authentication or account system.</p>
+            <p style="margin-top: 0.75rem;">Throughout this policy, "collect" means information that is sent to our
+                servers or to a third-party service. Information stored only on your device is not "collected" under
+                this policy.</p>
         </div>
 
         <!-- 2. How We Use Your Information -->
@@ -396,7 +412,7 @@
                     <tr>
                         <td>Display advertisements</td>
                         <td>Device identifiers, ad interaction data</td>
-                        <td>Legitimate interest / Consent</td>
+                        <td>Legitimate interest / Consent (where required)</td>
                     </tr>
                     <tr>
                         <td>Process in-app purchases</td>
@@ -406,12 +422,12 @@
                     <tr>
                         <td>Improve app stability</td>
                         <td>Crash logs, device info</td>
-                        <td>Legitimate interest</td>
+                        <td>Consent</td>
                     </tr>
                     <tr>
                         <td>Understand app usage patterns</td>
                         <td>Analytics data</td>
-                        <td>Legitimate interest / Consent</td>
+                        <td>Consent</td>
                     </tr>
                 </tbody>
             </table>
@@ -468,8 +484,8 @@
         <h2>4. Data Storage &amp; Security</h2>
         <ul>
             <li><strong>Local Storage:</strong> All user-created content (timers, blocks, history, media files, audio
-                recordings) is stored exclusively on your device using SQLite database and the device file system. We do
-                not have access to this data.</li>
+                recordings) is stored exclusively on your device using SQLite database and the device file system. We
+                do not have access to this data.</li>
             <li><strong>Third-Party Data:</strong> Data collected by AdMob, RevenueCat, Firebase Analytics, and Firebase
                 Crashlytics is stored on their respective servers. Please refer to their privacy policies for
                 information about their data retention practices.</li>
@@ -480,32 +496,85 @@
         <!-- 5. Your Rights & Choices -->
         <h2>5. Your Rights &amp; Choices</h2>
         <ul>
-            <li><strong>Ad Personalization:</strong> You can opt out of personalized advertising by adjusting your
-                device settings:
+            <li><strong>Analytics &amp; Crash Reports:</strong> Analytics and crash reporting are
+                <strong>disabled by default</strong> on first install. After you have used the App for several timer
+                sessions, the App asks whether you would like to share anonymous usage and crash data. You can change
+                your choice at any time from <strong>Settings → Privacy → Analytics &amp; Crash Reports</strong>.
+            </li>
+            <li><strong>Ad Personalization:</strong> When required by law (for example in the European Economic Area,
+                the United Kingdom, or certain US states), the App shows Google's User Messaging Platform consent form
+                on first launch and provides a persistent <strong>Settings → Privacy → Ad Privacy Options</strong>
+                entry to revise your ad consent at any time.
+                You can additionally opt out of personalized advertising at the device level:
                 <ul>
-                    <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
-                    <li><strong>iOS:</strong> Settings → Privacy → Apple Advertising → Personalized Ads (toggle off)
-                    </li>
+                    <li><strong>Android:</strong> Settings → Google → Ads → Reset / Opt out of Ads Personalization</li>
+                    <li><strong>iOS:</strong> Settings → Privacy → Apple Advertising → Personalized Ads</li>
                 </ul>
             </li>
-            <li><strong>Analytics Opt-Out:</strong> You may opt out of analytics collection through your device
-                settings.</li>
-            <li><strong>Delete Your Data:</strong> You can delete all locally stored data at any time through
+            <li><strong>Delete Your Data:</strong> You can clear locally stored data at any time through
                 <strong>Settings → Clear History</strong> or <strong>Settings → Reset All Data</strong> within the App.
             </li>
-            <li><strong>Uninstall:</strong> Uninstalling the App will remove all locally stored data, including the
-                SQLite database. Media files stored in the Documents/Timber folder may persist and can be manually
-                deleted.</li>
+            <li><strong>Uninstall:</strong> Uninstalling the App removes its internal database and preferences. Media
+                files stored in the Documents/Timber folder <strong>persist on your device after uninstall</strong>;
+                you can delete them manually from your device's file manager to reclaim storage.</li>
         </ul>
 
-        <!-- 6. Children's Privacy -->
-        <h2>6. Children's Privacy</h2>
-        <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information
-            from children under 13. If you believe we have inadvertently collected such information, please contact us
-            so we can promptly delete it.</p>
+        <!-- 6. EEA / UK / Swiss Rights -->
+        <h2>6. Rights for Users in the EEA, UK, and Switzerland (GDPR)</h2>
+        <p>If you are located in the European Economic Area, the United Kingdom, or Switzerland, you have the following
+            rights under the General Data Protection Regulation (GDPR) and equivalent UK / Swiss laws:</p>
+        <ul>
+            <li><strong>Right of access</strong> to the personal data we hold about you</li>
+            <li><strong>Right to rectification</strong> of inaccurate data</li>
+            <li><strong>Right to erasure</strong> of your data (you can also do this directly in
+                Settings → Reset All Data)</li>
+            <li><strong>Right to restrict</strong> or <strong>object to</strong> processing</li>
+            <li><strong>Right to data portability</strong></li>
+            <li><strong>Right to withdraw consent</strong> at any time, for both analytics (Settings → Privacy) and
+                personalized advertising (Settings → Privacy → Ad Privacy Options)</li>
+            <li><strong>Right to lodge a complaint</strong> with a supervisory authority in your jurisdiction</li>
+        </ul>
+        <p>Because the App does not require an account and collects no directly identifying information, requests for
+            access, rectification, or erasure can usually be fulfilled by the in-app data reset functions. For other
+            requests, please contact us at the email address in the Contact section below.</p>
+        <p><strong>Data Controller:</strong> The publisher of the Timber app, contactable at
+            <a href="mailto:spcfdoho.dev@gmail.com">spcfdoho.dev@gmail.com</a>.
+        </p>
 
-        <!-- 7. Permissions -->
-        <h2>7. Permissions Used</h2>
+        <!-- 7. US State Rights -->
+        <h2>7. Rights for US Residents (California, Virginia, Colorado, Connecticut, Utah, and Others)</h2>
+        <p>If you are a resident of a US state with comprehensive privacy legislation, you have the following rights
+            regarding personal information:</p>
+        <ul>
+            <li><strong>Right to know</strong> what categories of personal information are collected and how they are
+                used (described in Sections 1 and 2)</li>
+            <li><strong>Right to delete</strong> your personal information (via Settings → Reset All Data)</li>
+            <li><strong>Right to opt out</strong> of "sale" or "sharing" of personal information for targeted
+                advertising. The App provides this option through <strong>Settings → Privacy → Ad Privacy Options</strong>
+                when required by your state</li>
+            <li><strong>Right to non-discrimination</strong> for exercising your privacy rights</li>
+        </ul>
+        <p>We do not sell personal information in the traditional sense. The App may share device identifiers with our
+            advertising partner (Google AdMob) for the purposes of displaying relevant ads, which some state laws
+            classify as a "sale" or "share." You can opt out of this through the in-app Ad Privacy Options entry.</p>
+
+        <!-- 8. International Transfers -->
+        <h2>8. International Data Transfers</h2>
+        <p>The third-party services used by the App (Google AdMob, Google Firebase, RevenueCat) are operated by
+            companies based in the United States. When the App sends data to these services, that data is transferred
+            to and processed in the United States. These providers rely on appropriate safeguards (such as Standard
+            Contractual Clauses and the EU–US Data Privacy Framework, where applicable) for international data
+            transfers as required by GDPR and other applicable laws.</p>
+
+        <!-- 9. Children's Privacy -->
+        <h2>9. Children's Privacy</h2>
+        <p>The App is not directed at children. Our intended audience is users aged 18 and over. We do not knowingly
+            collect personal information from children under the age of 13 (or the applicable minimum age in your
+            jurisdiction). If you believe we have inadvertently collected such information, please contact us so we
+            can promptly delete it.</p>
+
+        <!-- 10. Permissions -->
+        <h2>10. Permissions Used</h2>
         <p>The App requests the following device permissions:</p>
         <div class="table-wrapper">
             <table>
@@ -518,49 +587,51 @@
                 <tbody>
                     <tr>
                         <td><strong>Internet</strong></td>
-                        <td>Required for displaying ads (AdMob), managing purchases (RevenueCat), and sending
-                            analytics/crash data</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Read External Storage</strong></td>
-                        <td>Access audio/video files you select for timer media</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Write External Storage</strong></td>
-                        <td>Save imported media files to the Timber folder</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Read Media Audio/Video</strong></td>
-                        <td>Access media files on Android 13+ devices</td>
+                        <td>Required to display ads (AdMob), validate purchases (RevenueCat), and send analytics /
+                            crash diagnostics to Firebase when you have opted in.</td>
                     </tr>
                     <tr>
                         <td><strong>Record Audio</strong></td>
-                        <td>Record custom audio for use with timer blocks</td>
+                        <td>Capture custom voice recordings for use as media inside timer blocks. Recordings are stored
+                            on your device and never uploaded.</td>
                     </tr>
                     <tr>
-                        <td><strong>Foreground Service</strong></td>
-                        <td>Keep the timer running accurately in the background</td>
+                        <td><strong>Foreground Service / Foreground Service (Media Playback)</strong></td>
+                        <td>Allow the timer to continue running accurately and play audio / visual cues when the
+                            screen is off or the app is in the background.</td>
                     </tr>
                     <tr>
                         <td><strong>Post Notifications</strong></td>
-                        <td>Show timer completion and progress notifications</td>
+                        <td>Show timer progress and completion notifications, plus media controls when a timer is
+                            running.</td>
                     </tr>
                     <tr>
                         <td><strong>Wake Lock</strong></td>
-                        <td>Prevent the device from sleeping during active timer sessions</td>
+                        <td>Prevent the device from sleeping during an active timer session.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Read / Write External Storage</strong> (Android 8 and 9 only)</td>
+                        <td>On legacy Android versions, used to save imported media into the Documents/Timber folder.
+                            On Android 10 and newer, scoped storage handles this without any permission, and these
+                            permissions are not requested.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <p style="font-size: 0.875rem;">
+            The App uses Android's <strong>Storage Access Framework</strong> (the system file picker) to let you
+            choose audio, video, or image files. It does not request broad access to your photo, video, or audio
+            library — the system only grants the App access to the specific files you pick.
+        </p>
 
-        <!-- 8. Changes -->
-        <h2>8. Changes to This Privacy Policy</h2>
+        <!-- 11. Changes -->
+        <h2>11. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
             Privacy Policy within the App and updating the "Last updated" date above. You are advised to review this
             Privacy Policy periodically for any changes.</p>
 
-        <!-- 9. Contact -->
-        <h2>9. Contact Us</h2>
+        <!-- 12. Contact -->
+        <h2>12. Contact Us</h2>
         <div class="section-card" style="text-align: center;">
             <p>If you have any questions about this Privacy Policy, please reach out:</p>
             <a href="mailto:spcfdoho.dev@gmail.com?subject=Timber Privacy Policy Question" class="feedback-link">
